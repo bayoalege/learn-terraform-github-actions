@@ -11,17 +11,18 @@ terraform {
   }
   #required_version = "3.0.1"
 
+
   cloud {
     organization = "bayoecommerce"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "test-workflow-actions"
     }
   }
 }
 
 provider "aws" {
-  region = var.aws_region
+  region = "us-east-1"
 }
 
 resource "random_pet" "sg" {}
